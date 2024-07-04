@@ -9,4 +9,6 @@ export class AppComponent {
   title = 'Angular learning';
   currentYear = new Date().getFullYear();
   public name = 'My name';
+
+  greetUser = () => 'Good morning' + this.name;
 }
