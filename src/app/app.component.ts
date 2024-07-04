@@ -15,4 +15,11 @@ export class AppComponent {
   /* Property binding */
   public myId = 'testId';
   public isDisabled = false;
+
+  public inputData: String = ' ';
+
+  onChange(event: any): void {
+    this.inputData = event.target.value;
+    console.log(this.inputData);
+  }
 }
