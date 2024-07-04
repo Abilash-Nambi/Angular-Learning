@@ -3,8 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'my-angular-project';
+  title = 'Angular learning';
+  currentYear = new Date().getFullYear();
+  public name = 'My name';
 }
