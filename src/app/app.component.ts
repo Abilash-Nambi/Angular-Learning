@@ -22,4 +22,12 @@ export class AppComponent {
     this.inputData = event.target.value;
     console.log(this.inputData);
   }
+  count: number = 0;
+
+  increament() {
+    this.count++;
+  }
+  decrement() {
+    this.count > 0 && this.count--;
+  }
 }

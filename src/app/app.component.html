@@ -12,6 +12,11 @@
   <input type="text" [id]="myId" (input)="onChange($event)" />
 
   <input type="text" [id]="myId" [disabled]="isDisabled" />
+
+  <h1>Class Binding</h1>
+  <h5 [ngClass]="count > 0 ? 'sucess' : 'danger'">counter {{ count }}</h5>
+  <button (click)="increament()">+</button>
+  <button (click)="decrement()">-</button>
   <!--  -->
   <app-binding></app-binding>
 </div>
