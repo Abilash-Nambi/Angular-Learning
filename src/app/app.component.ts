@@ -11,7 +11,7 @@ export class AppComponent {
   currentYear = new Date().getFullYear();
   public name = 'My name';
 
-  greetUser = () => 'Good morning' + this.name;
+  greetUser = (): string => 'Good morning' + this.name;
   /* Property binding */
   public myId = 'testId';
   public isDisabled = false;
@@ -24,10 +24,14 @@ export class AppComponent {
   }
   count: number = 0;
 
-  increament() {
+  increament(): void {
     this.count++;
   }
-  decrement() {
+  decrement(): void {
     this.count > 0 && this.count--;
+  }
+
+  log(input: any): void {
+    console.log('🚀 + AppComponent + log + input:', input.value);
   }
 }
