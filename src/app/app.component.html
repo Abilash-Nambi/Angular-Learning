@@ -2,26 +2,10 @@
 
 <!-- Toolbar -->
 <div>
-  <h1>This is Interpolation</h1>
-  <h2>App component {{ title }}</h2>
-  <p>The current year is {{ currentYear }}</p>
-  <p>{{ name }}</p>
-  <p>{{ 2 + 2 }}</p>
-  <h3>{{ greetUser() }}</h3>
-  <h1>Property Binding</h1>
-  <input type="text" [id]="myId" (input)="onChange($event)" />
+  <app-header></app-header>
+</div>
 
-  <input type="text" [id]="myId" [disabled]="isDisabled" />
-
-  <h1>Class Binding</h1>
-  <h5 [ngClass]="count > 0 ? 'sucess' : 'danger'">counter {{ count }}</h5>
-  <button (click)="increament()">+</button>
-  <button (click)="decrement()">-</button>
-  <!--  -->
-
-  <h1>Template Reference Variable</h1>
-  <input type="text" #myInput />
-  <button (click)="log(myInput)">Click me</button>
+<div>
   <app-binding></app-binding>
 </div>
 
