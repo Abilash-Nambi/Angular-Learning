@@ -26,4 +26,12 @@
       <h1>Name is hidden</h1>
     </ng-template>
   </div>
+
+  <!-- ngSwitch -->
+  <div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'">You picked red</h1>
+    <h1 *ngSwitchCase="'blue'">You picked blue</h1>
+    <h1 *ngSwitchCase="'yellow'">You picked yellow</h1>
+    <h1 *ngSwitchDefault="''">You picked no color</h1>
+  </div>
 </div>
