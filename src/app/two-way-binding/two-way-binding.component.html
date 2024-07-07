@@ -1,4 +1,5 @@
 <div>
+  <!-- Two Way Binding -->
   <input
     type="text"
     name="firstname"
@@ -7,10 +8,21 @@
     class="border-cyan-900 border"
   />
   {{ firstname }}
+  <!-- ngIf -->
   <div>
-    <!-- <h1 *ngIf="hidden; else hiddenName" class="text-2xl">Abialsh</h1> -->
-    <h1 class="text-2xl">Abialsh</h1>
+    <h1 *ngIf="hidden; else hiddenName" class="text-2xl">Abialsh</h1>
+
     <ng-template #hiddenName>
+      <h1>Name is hidden</h1>
+    </ng-template>
+  </div>
+  <div>
+    <div *ngIf="hidden; then thenBlock; else elseBlock"></div>
+
+    <ng-template #thenBlock>
+      <h1 class="text-2xl">Abialsh</h1>
+    </ng-template>
+    <ng-template #elseBlock>
       <h1>Name is hidden</h1>
     </ng-template>
   </div>
