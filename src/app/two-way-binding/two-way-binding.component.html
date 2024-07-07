@@ -7,5 +7,11 @@
     class="border-cyan-900 border"
   />
   {{ firstname }}
-  <h1>hsd</h1>
+  <div>
+    <!-- <h1 *ngIf="hidden; else hiddenName" class="text-2xl">Abialsh</h1> -->
+    <h1 class="text-2xl">Abialsh</h1>
+    <ng-template #hiddenName>
+      <h1>Name is hidden</h1>
+    </ng-template>
+  </div>
 </div>

@@ -10,4 +10,5 @@ export class TwoWayBindingComponent implements OnInit {
 
   ngOnInit(): void {}
   public firstname: string = '';
+  public hidden = false;
 }
