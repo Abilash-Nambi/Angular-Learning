@@ -14,5 +14,6 @@ export class HeaderComponent implements OnInit {
     { title: 'Logo', path: '' },
     { title: 'Binding', path: 'binding' },
     { title: 'Two Way Binding', path: 'two-way-binding' },
+    { title: 'Users', path: 'users' },
   ];
 }

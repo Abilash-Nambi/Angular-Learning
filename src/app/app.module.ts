@@ -8,10 +8,21 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { HomeComponent } from './home/home.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { UsersDetailsListComponent } from './users-details-list/users-details-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, BindingComponent, HeaderComponent, TwoWayBindingComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent,
+    BindingComponent,
+    HeaderComponent,
+    TwoWayBindingComponent,
+    HomeComponent,
+    UsersListComponent,
+    UsersDetailsListComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
