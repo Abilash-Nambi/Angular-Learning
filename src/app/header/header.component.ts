@@ -11,7 +11,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   public title = [
-    { title: 'Binding', path: 'home' },
+    { title: 'Logo', path: '' },
+    { title: 'Binding', path: 'binding' },
     { title: 'Two Way Binding', path: 'two-way-binding' },
   ];
 }

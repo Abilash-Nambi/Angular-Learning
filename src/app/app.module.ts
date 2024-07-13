@@ -7,9 +7,10 @@ import { BindingComponent } from './binding/binding.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, BindingComponent, HeaderComponent, TwoWayBindingComponent],
+  declarations: [AppComponent, BindingComponent, HeaderComponent, TwoWayBindingComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
