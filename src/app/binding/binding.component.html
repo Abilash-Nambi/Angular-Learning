@@ -11,7 +11,9 @@
   <input type="text" [id]="myId" [disabled]="isDisabled" />
 
   <h1>Class Binding</h1>
-  <h5 [ngClass]="count > 0 ? 'sucess' : 'danger'">counter {{ count }}</h5>
+  <h5 [ngClass]="count > 0 ? 'bg-gray-500' : 'bg-green-300'" class="text-5xl">
+    counter {{ count }}
+  </h5>
   <button (click)="increament()">+</button>
   <button (click)="decrement()">-</button>
   <!--  -->
