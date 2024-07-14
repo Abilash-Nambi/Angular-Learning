@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'binding', component: BindingComponent },
   { path: 'two-way-binding', component: TwoWayBindingComponent },
   { path: 'users', component: UsersListComponent },
-  { path: 'users-list/:id', component: UsersDetailsListComponent },
+  { path: 'users/:id', component: UsersDetailsListComponent },
 ];
 
 @NgModule({
