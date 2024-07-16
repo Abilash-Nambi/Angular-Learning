@@ -2,7 +2,13 @@
   <!-- <h1 class="text-2xl text-red-500 cursor-pointer">Logo</h1> -->
   <ul *ngFor="let item of title">
     <li class="text-2xl text-red-500 cursor-pointer">
-      <a [routerLink]="item.path">{{ item.title }}</a>
+      <a
+        [routerLink]="item.path"
+        [routerLinkActive]="'bg-blue-700'"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        {{ item.title }}</a
+      >
     </li>
   </ul>
 </header>
