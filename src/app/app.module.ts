@@ -11,6 +11,7 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { UsersDetailsListComponent } from './users-details-list/users-details-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormComponent } from './form/form.component';
     UsersListComponent,
     UsersDetailsListComponent,
     FormComponent,
+    ReactiveFormsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
