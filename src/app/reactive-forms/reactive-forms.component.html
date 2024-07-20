@@ -1,4 +1,8 @@
-<form class="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+<form
+  class="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md"
+  [formGroup]="userForm"
+  (ngSubmit)="submit()"
+>
   <h2 class="text-2xl font-bold mb-6 text-gray-800">Personal Details</h2>
 
   <div class="mb-4">
@@ -10,8 +14,13 @@
       id="name"
       name="name"
       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-      required
+      formControlName="name"
     />
+    <div
+      *ngIf="(registerFormControl['name'].touched || submitted) &&  registerFormControl['name'].errors?.['required']"
+    >
+      Name field is required
+    </div>
   </div>
 
   <div class="mb-4">
@@ -23,8 +32,18 @@
       id="email"
       name="email"
       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-      required
+      formControlName="email"
     />
+    <div
+      *ngIf="(registerFormControl['email'].touched || submitted) &&  registerFormControl['email'].errors?.['required']"
+    >
+      Email field is required
+    </div>
+    <div
+      *ngIf="registerFormControl['email'].touched  &&  registerFormControl['email'].errors?.['email']"
+    >
+      Enter a valid email address
+    </div>
   </div>
 
   <div class="mb-4">
@@ -36,7 +55,22 @@
       id="phone"
       name="phone"
       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      formControlName="number"
     />
+
+    <div
+      *ngIf="(registerFormControl['number'].touched || submitted) &&  registerFormControl['number'].errors?.['required']"
+    >
+      Number field is required
+    </div>
+    <div
+      *ngIf="
+        registerFormControl['number'].touched &&
+        registerFormControl['number'].errors?.['pattern']
+      "
+    >
+      Please, Enter 10 digit Mobile Number
+    </div>
   </div>
 
   <div class="mb-6">
@@ -48,7 +82,13 @@
       id="dob"
       name="dob"
       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      formControlName="dob"
     />
+    <div
+      *ngIf="(registerFormControl['dob'].touched || submitted) &&  registerFormControl['dob'].errors?.['required']"
+    >
+      Date of birth is required
+    </div>
   </div>
 
   <button
