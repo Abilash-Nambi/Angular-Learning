@@ -11,11 +11,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   public title = [
-    { title: 'Logo', path: '' },
+    { title: 'Advanced ', path: '' },
     { title: 'Binding', path: '/binding' },
     { title: 'Two Way Binding', path: '/two-way-binding' },
     { title: 'Users', path: '/users' },
     { title: 'Forms', path: '/forms' },
     { title: 'Reactive-Forms', path: '/reactiveforms' },
+    { title: 'Custom Form', path: '/custom-form/myForm' },
   ];
 }

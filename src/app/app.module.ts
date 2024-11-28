@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CustomFormComponent } from './custom-module/custom-form/custom-form.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UsersDetailsListComponent,
     FormComponent,
     ReactiveFormsComponent,
+    //CustomFormComponent,
   ],
   imports: [
     BrowserModule,

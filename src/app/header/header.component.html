@@ -1,14 +1,21 @@
-<header class="w-full flex h-[3em] items-center justify-around container">
-  <!-- <h1 class="text-2xl text-red-500 cursor-pointer">Logo</h1> -->
-  <ul *ngFor="let item of title">
-    <li class="text-2xl text-red-500 cursor-pointer">
-      <a
-        [routerLink]="item.path"
-        [routerLinkActive]="'bg-blue-700'"
-        [routerLinkActiveOptions]="{ exact: true }"
+<header class="w-full flex items-center bg-gray-100 shadow-md py-2">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <h1 class="text-2xl text-blue-600 font-bold cursor-pointer">Logo</h1>
+    <!-- Navigation -->
+    <ul class="flex space-x-6">
+      <li
+        *ngFor="let item of title"
+        class="text-lg text-gray-700 hover:text-blue-500 transition-colors"
       >
-        {{ item.title }}</a
-      >
-    </li>
-  </ul>
+        <a
+          [routerLink]="item.path"
+          [routerLinkActive]="'bg-blue-200 px-4 py-2 rounded-lg'"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ item.title }}
+        </a>
+      </li>
+    </ul>
+  </div>
 </header>

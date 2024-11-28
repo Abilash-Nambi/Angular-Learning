@@ -16,6 +16,22 @@ const routes: Routes = [
   { path: 'users/:id', component: UsersDetailsListComponent },
   { path: 'forms', component: FormComponent },
   { path: 'reactiveforms', component: ReactiveFormsComponent },
+  //{ path: 'custom-form', component: CustomFormComponent },
+
+  {
+    path: 'custom-form',
+    loadChildren: () =>
+      import('./custom-module/custom-module.module').then(
+        (m) => m.CustomModuleModule
+      ),
+  },
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./product-listing/product-listing.module').then(
+        (m) => m.ProductListingModule
+      ),
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,31 @@
+<div class="flex items-center space-x-6 p-4 bg-white rounded-lg shadow-md">
+  <!-- Stock Radio Button -->
+  <label class="flex items-center space-x-2 text-gray-700">
+    <input
+      type="radio"
+      name="stockFilter"
+      [(ngModel)]="filterValue"
+      value="stock"
+      class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+      (change)="onChange()"
+    />
+    <span>Stock</span>
+    <span>Total Stock:{{ totalStock }}</span>
+  </label>
+
+  <!-- Out of Stock Radio Button -->
+  <label class="flex items-center space-x-2 text-gray-700">
+    <input
+      type="radio"
+      name="stockFilter"
+      [(ngModel)]="filterValue"
+      value="outofstock"
+      class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+      (change)="onChange()"
+    />
+    <span>Out of Stock</span>
+    <span>Out of Stock:{{ outOfStock }}</span>
+  </label>
+</div>
+
+<p class="mt-4 text-sm text-gray-500">Selected filter: {{ filterValue }}</p>

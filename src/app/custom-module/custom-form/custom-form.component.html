@@ -1,0 +1,49 @@
+<form
+  [formGroup]="Form"
+  (ngSubmit)="onSubmit()"
+  class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg my-10"
+>
+  <div class="mb-4">
+    <label for="name" class="block text-sm font-medium text-gray-700"
+      >Name:</label
+    >
+    <input
+      id="name"
+      formControlName="name"
+      type="text"
+      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+    />
+  </div>
+
+  <div class="mb-4">
+    <label for="email" class="block text-sm font-medium text-gray-700"
+      >Email:</label
+    >
+    <input
+      id="email"
+      formControlName="email"
+      type="email"
+      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+    />
+  </div>
+
+  <div class="mb-4">
+    <label for="message" class="block text-sm font-medium text-gray-700"
+      >Message:</label
+    >
+    <textarea
+      id="message"
+      formControlName="message"
+      rows="4"
+      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="Form.invalid"
+    class="w-full px-4 py-2 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
+  >
+    Submit
+  </button>
+</form>
