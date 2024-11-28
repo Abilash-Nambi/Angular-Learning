@@ -1,6 +1,10 @@
-<app-filter [totalStock]="totalStock" [outOfStock]="outOfStock"></app-filter>
+<app-filter
+  [totalStock]="totalStock"
+  [outOfStock]="outOfStock"
+  (changedFilteredValue)="onFilterValueChanged($event)"
+></app-filter>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 px-9">
-  <div *ngFor="let item of products">
+  <div *ngFor="let item of filteredArray">
     <app-single-product [product]="item"></app-single-product>
   </div>
 </div>

@@ -13,6 +13,7 @@ export class ProductsComponent implements OnInit {
 
   totalStock: number;
   outOfStock: number;
+  filteredArray: Product[] = [];
   products: Product[] = [
     {
       box_condition: 'good_condition',
@@ -3707,5 +3708,12 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     this.totalStock = this.products.filter((p) => p.has_stock === true).length;
     this.outOfStock = this.products.filter((p) => p.has_stock === false).length;
+    this.filteredArray = [...this.products];
+  }
+
+  onFilterValueChanged(value: String) {
+    const data = this.products.filter((p) => p.has_stock.toString() === value);
+
+    this.filteredArray = [...data];
   }
 }
