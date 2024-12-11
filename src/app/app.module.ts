@@ -14,6 +14,7 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CustomFormComponent } from './custom-module/custom-form/custom-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CustomFormComponent } from './custom-module/custom-form/custom-form.com
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

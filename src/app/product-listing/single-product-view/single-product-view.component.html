@@ -1,0 +1,69 @@
+<div class="p-6 max-w-lg mx-auto bg-white rounded-lg shadow-md space-y-4">
+  <!-- data Image -->
+  <div class="flex justify-center">
+    <img
+      src="{{ data.grid_picture_url }}"
+      alt="{{ data.name }}"
+      class="rounded-lg shadow-lg w-64 h-64 object-cover"
+    />
+  </div>
+
+  <!-- data Name and Status -->
+  <div class="text-center">
+    <h2 class="text-2xl font-bold text-gray-800">{{ data.name }}</h2>
+    <span
+      class="text-sm font-medium px-3 py-1 rounded-full 
+        {{
+        data.status === 'active'
+          ? 'bg-green-100 text-green-700'
+          : 'bg-red-100 text-red-700'
+      }}"
+    >
+      {{ data.status }}
+    </span>
+  </div>
+
+  <!-- data Details -->
+  <div class="space-y-2">
+    <p class="text-gray-600"><strong>Brand:</strong> {{ data.brand_name }}</p>
+    <p class="text-gray-600"><strong>Designer:</strong> {{ data.designer }}</p>
+    <p class="text-gray-600"><strong>Color:</strong> {{ data.color }}</p>
+    <p class="text-gray-600">
+      <strong>Condition:</strong> {{ data.shoe_condition }} | Box:
+      {{ data.box_condition }}
+    </p>
+    <p class="text-gray-600">
+      <strong>Category:</strong> {{ data.category.join(", ") }}
+    </p>
+    <p class="text-gray-600">
+      <strong>Gender:</strong> {{ data.gender.join(", ") }}
+    </p>
+    <p class="text-gray-600">
+      <strong>Silhouette:</strong> {{ data.silhouette }}
+    </p>
+    <p class="text-gray-600">
+      <strong>Release Date:</strong> {{ data.release_date | date }}
+    </p>
+    <p class="text-gray-600">
+      <strong>Retail Price:</strong> ${{
+        (data.retail_price_cents / 100).toFixed(2)
+      }}
+    </p>
+  </div>
+
+  <!-- data Description -->
+  <div>
+    <h3 class="text-lg font-semibold text-gray-800">Story</h3>
+    <p class="text-gray-600" [innerHTML]="data.story_html"></p>
+  </div>
+
+  <!-- Close Button -->
+  <div class="flex justify-end">
+    <button
+      mat-dialog-close
+      class="px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
+    >
+      Close
+    </button>
+  </div>
+</div>

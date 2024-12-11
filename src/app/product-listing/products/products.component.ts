@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsersService } from 'src/app/users.service';
 import { Product } from 'src/app/model';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-products',
@@ -9,7 +10,7 @@ import { Product } from 'src/app/model';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
 
   totalStock: number;
   outOfStock: number;
